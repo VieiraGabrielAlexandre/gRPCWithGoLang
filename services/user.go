@@ -3,12 +3,11 @@ package service
 import (
 	"context"
 	"fmt"
-	"google.golang.org/grpc"
-	"/pb"
+	"github.com/VieiraGabrielAlexandre/gRPCWithGoLang/pb"
 )
 
 type UserServiceServer interface {
-	AddUser(context.Context, *User) (*User, error)
+	AddUser(context.Context, *pb.User) (*pb.User, error)
 	mustEmbedUnimplementedUserServiceServer()
 }
 
